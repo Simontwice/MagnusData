@@ -6,7 +6,6 @@ from typing import List, Dict
 import datasets
 import pandas as pd
 from absl import logging
-from smart_open import smart_open
 
 
 class CreateDeduplicatedDsJob:
@@ -15,8 +14,8 @@ class CreateDeduplicatedDsJob:
         file_paths,
         out_path,
         forbidden_statements_path,
-        generation_mode="premise_selection",
-        deduplication_features=("state", "statement", "step"),
+        generation_mode,
+        deduplication_features,
     ):
         """
 
@@ -32,7 +31,8 @@ class CreateDeduplicatedDsJob:
         self.generation_mode = generation_mode
         self.deduplication_features = deduplication_features
         with open(self.forbidden_statements_path, "r") as f:
-            self.forbidden_statements = trim_all(json.loads(json.load(f)))
+            values = json.load(f).values()
+            self.forbidden_statements = trim_all([thm["lemma"] for thm in values])
 
     def execute(self):
         """
@@ -40,7 +40,6 @@ class CreateDeduplicatedDsJob:
         Returns:
 
         """
-        assert self.generation_mode in ["premise_selection", "step_generation"]
         self.create_examples_from_proof = (
             create_examples_from_proof_for_premise_selection
             if self.generation_mode == "premise_selection"
@@ -58,13 +57,13 @@ class CreateDeduplicatedDsJob:
         dedup_datapoints = deduplicate_data(all_datapoints, features=self.deduplication_features)
         random.seed(0)
         random.shuffle(dedup_datapoints)
-        with smart_open(self.out_path, "w") as f:
+        with open(self.out_path, "w") as f:
             json.dump(dedup_datapoints, f, indent=2)
             dataset = datasets.Dataset.from_pandas(pd.DataFrame(data=dedup_datapoints))
             dataset.to_json("/home/szymon/Downloads/HF_PSM_data/full_dataset.json")
 
     def dataset_from_filename(self, fname):
-        with smart_open(fname) as ds_json:
+        with open(fname) as ds_json:
             logging.info(fname)
             try:
                 ds_fragment = json.load(ds_json)
@@ -76,8 +75,10 @@ class CreateDeduplicatedDsJob:
 
     def dataset_from_multiple_filenames(self, fnames):
         all_datapoints = []
+
         json_failed_files = []
         jsons_failed_to_load = 0
+
         for idx, fname in enumerate(fnames):
             datapoints_from_single_file, failed = self.dataset_from_filename(fname)
             all_datapoints += datapoints_from_single_file
