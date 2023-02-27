@@ -108,8 +108,9 @@ The dataset was created using the proofs included in the [Archive of Formal Proo
 
 The data included in this dataset is mostly untyped, meaning that there is little information about the objects referenced in the statement or premise statements. Adding type information would be a valuable contribution.
 
-### Additional Informations
-
 ### Citation
+<TODO: add citation>
 
 ### Acknowledgements
+<TODO: add Jin to contributors>
+<TODO: acknowledge that mining was done with compute from google>
