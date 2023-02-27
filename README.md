@@ -86,7 +86,7 @@ python generation_script.py --file-paths <paths> --out-path <out_path> --forbidd
 ```
 
 ### Overview of raw data files
-The files are available for download at <TODO: HF repo>
+All files are available for download at <TODO: HF repo>
 
 The data is divided into two categories: `human data` and `machine_generated_data`.
 
