@@ -58,8 +58,9 @@ Trajectory:
   'statement': str,
   'transitions': List[Transition]
 }
-
+```
 where
+```
 Transition: 
 {
   'state': str,
