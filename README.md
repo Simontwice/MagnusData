@@ -68,9 +68,14 @@ Transition:
 }
 ```
 In 'premises', the keys are names of the premises referenced in the proof step, whereas the values are lists, where the first element is the name of the premise in the lemma library, and the second element is the statement of the premise.
+
+### Dataset generation
+
+TODO 
+
 ### Languages
 
-All information contained in this dataset is written in English and using the Isabelle syntax, which represents mathematical expressions using synatx similar to LaTeX.
+All information contained in this dataset is written in English and using the Isabelle syntax, which represents mathematical expressions using syntax similar to LaTeX.
 
 ### Source Data
 The dataset was created using the proofs included in the [Archive of Formal Proofs](https://www.isa-afp.org/) and the Standard library included in the [Isabelle](https://isabelle.in.tum.de/) 2021-1 distribution.
@@ -79,4 +84,8 @@ The dataset was created using the proofs included in the [Archive of Formal Proo
 
 The data included in this dataset is mostly untyped, meaning that there is little information about the objects referenced in the statement or premise statements. Adding type information would be a valuable contribution.
 
+### Additional Informations
 
+### Citation
+
+### Acknowledgements
