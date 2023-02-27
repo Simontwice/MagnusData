@@ -1,4 +1,4 @@
-This repo contains the results of the data mining described <TODO: link paper>. You can download/stream the dataset used in the paper at <TODO: link HF>
+This repo contains the results of the data mining described <TODO: link paper>. You can download/stream the dataset used in the paper at <TODO: link HF>. The code in this repo can be used to process raw data included in <TODO: link HF> and generate new datasets, which can be used for premise selection, proof generation and text retrieval tasks.
 
 # Introduction
 
