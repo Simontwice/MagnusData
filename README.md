@@ -72,14 +72,13 @@ In 'premises', the keys are names of the premises referenced in the proof step, 
 
 ## Dataset generation
 
-In order to generate your own dataset from the raw data, first run `setup.sh` to set up a virtual environment and install dependencies.
+In order to generate your own dataset from the raw data, download the selected raw files included [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main). We include a discussion of the source and extraction methods for all the raw data files below.
+
+Next, run `setup.sh` to set up a virtual environment and install dependencies.
 ```
 chmod +x setup.sh
 ./setup.sh
 ```
-
-Then, download the selected raw files included [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main). We include a discussion of the source and extraction methods for all the raw data files below.
-
 Finally, run the following script to generate the data in a `JSON` format compliant with Huggingface's [Datasets](https://huggingface.co/docs/datasets/index):
 ```
 python generation_script.py --file-paths <paths> --out-path <out_path> --forbidden-statements-path PISA_test_theorems.json
