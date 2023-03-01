@@ -1,4 +1,4 @@
-This repo contains the results of the data mining described <TODO: link paper>. You can download/stream the dataset used in the paper from our [Huggingface datasets](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle) page. The code in this repo can be used to process raw data included [here](huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main) and generate new datasets, which can be used for premise selection, proof generation and text retrieval tasks.
+This repo contains the results of the data mining described <TODO: link paper>. You can download/stream the dataset used in the paper from our [Huggingface datasets](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle) page. The code in this repo and the data stored [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main) can be used to generate new datasets for premise selection, proof generation and text retrieval tasks.
 
 # Introduction
 
@@ -78,7 +78,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-Then, download the selected raw files included [here]([https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main)). We include a discussion of the source and extraction methods for all the raw data files below.
+Then, download the selected raw files included [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main). We include a discussion of the source and extraction methods for all the raw data files below.
 
 Finally, run the following script to generate the data in a `JSON` format compliant with Huggingface's [Datasets](https://huggingface.co/docs/datasets/index):
 ```
@@ -86,7 +86,7 @@ python generation_script.py --file-paths <paths> --out-path <out_path> --forbidd
 ```
 
 ### Overview of raw data files
-All files are available for download at <TODO: HF repo>
+All files are available for download [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main)
 
 The data is divided into two categories: `human data` and `machine_generated_data`.
 
