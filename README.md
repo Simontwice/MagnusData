@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains the code and data used to generate a premise selection dataset, which is described in a (TODO: add paper). The premise selection model trained on this dataset achieved state-of-the-art results: 71% proof rate on the PISA benchmark and 37.3% on miniF2F.
+This repository contains the code and data used to generate a premise selection dataset, which is described in a (TODO: add paper). The premise selection model trained on this dataset achieved a state-of-the-art 71% proof rate on the [PISA](http://aitp-conference.org/2021/abstract/paper_17.pdf) benchmark and 37.3% on [miniF2F](https://arxiv.org/abs/2109.00110).
 
 You can download the dataset used in the paper from our [Huggingface datasets](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle) page. The code in this repository and the data stored [here](https://huggingface.co/datasets/Simontwice/premise_selection_in_isabelle/tree/main) can be used to generate new datasets for premise selection, proof generation, and text retrieval tasks.
 
