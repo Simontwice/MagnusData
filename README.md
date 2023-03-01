@@ -114,6 +114,12 @@ The data included in this dataset is mostly untyped, meaning that there is littl
 <TODO: cite arxiv paper>
 
 ### Acknowledgements
-<TODO: add Jin to contributors>
-<TODO: acknowledge that mining was done with compute from google>
-<TODO: mention that PISA was used to mine the raw data>
+We would like to express our gratitude to the following individuals and organizations for their contributions to this project:
+
+    We would like to acknowledge @jinpz for their contributions to the data mining aspect of this project. Their expertise and hard work greatly assisted us in achieving our project goals.
+
+    PISA API: We also want to thank the developers of the [PISA](https://github.com/albertqjiang/Portal-to-ISAbelle) API for creating a powerful tool that allowed us to interact with Isabelle through Python.
+
+    Google TRC Compute: Finally, we want to acknowledge Google's [TPU Reasearch Cloud](https://sites.research.google/trc/about/) for providing compute necessary to develop the code infrastructure needed for the mining procedure.
+
+We are grateful for the support and contributions of each of these individuals and organizations, and we would not have been able to accomplish this project without them.
