@@ -109,7 +109,7 @@ The dataset was created using the proofs included in the [Archive of Formal Proo
 The data included in this dataset is mostly untyped, meaning that there is little information about the objects referenced in the statement or premise statements. Adding type information would be a valuable contribution.
 
 ### Citation
-If you use this dataset in your research, please cite the associated arXiv paper (TODO: add citation).
+If you use this dataset in your research, please cite the associated arXiv paper: (Magnushammer: A Transformer-based Approach to Premise Selection)[https://arxiv.org/abs/2303.04488]
 
 ### Acknowledgements
 We would like to express our gratitude to the following individuals and organizations for their contributions to this project:
